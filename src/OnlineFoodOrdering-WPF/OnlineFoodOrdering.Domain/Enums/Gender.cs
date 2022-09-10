@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace OnlineFoodOrdering.Domain.Enums
 {
-    internal class Class1
+    public enum Gender
     {
+        Male,
+        Female
     }
 }

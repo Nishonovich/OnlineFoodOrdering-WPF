@@ -12,6 +12,9 @@ namespace OnlineFoodOrdering.Data.DbContexts
     public class AppDbContext : DbContext
     {
         public virtual DbSet<Customer> Customers { get; set; } = null!;
+        public virtual DbSet<Employee> Employees { get; set; } = null!;
+        public virtual DbSet<Payment> Payments { get; set; } = null!;
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql(DBConstants.connectionString);
