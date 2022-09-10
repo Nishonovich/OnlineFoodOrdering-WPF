@@ -10,7 +10,5 @@ namespace OnlineFoodOrdering.Domain.Constants
     {
         public const string connectionString = "Host=localhost; Port=5432; Database=Online-Food-Ordering; " +
             "User Id = Postgres; Password=admin;";
-
-
     }
 }
