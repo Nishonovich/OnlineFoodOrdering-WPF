@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineFoodOrdering.Domain.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OnlineFoodOrdering.Domain.Entities
 {
-    public class Food
+    public class Food: Auditable
     {
         public String FoodName { get; set; } = String.Empty;
         public float FoodPrice { get; set; }
