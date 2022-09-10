@@ -12,6 +12,7 @@ namespace OnlineFoodOrdering.Domain.Entities
     {
         [Required]
         public long Order_id { get; set; }
+        public virtual Order Order { get; set; }
 
         [Required]
         public double Total_sum { get; set; }
@@ -19,7 +20,14 @@ namespace OnlineFoodOrdering.Domain.Entities
         [Required]
         public long Emoloyee_id { get; set; }
 
+        public virtual Employee Employee { get; set; }
+
         //payment_date ni yozmadim, chunki Auditabledan meros olingan
 
+        public Payment()
+        {
+            Employee = new Employee();
+            Order = new Order();
+        }
     }
 }
