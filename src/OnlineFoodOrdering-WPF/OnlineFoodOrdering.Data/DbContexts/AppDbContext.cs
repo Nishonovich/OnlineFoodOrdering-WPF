@@ -16,7 +16,8 @@ namespace OnlineFoodOrdering.Data.DbContexts
         public virtual DbSet<Payment> Payments { get; set; } = null!;
         public virtual DbSet<Food> Foods { get; set; } = null!;
         public virtual DbSet<FoodType> FoodTypes { get; set; } = null!;
-
+        public virtual DbSet<Order> Orders { get; set; } = null!;
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
