@@ -12,10 +12,14 @@ namespace OnlineFoodOrdering.Domain.Entities
         public String FoodName { get; set; } = String.Empty;
         public float FoodPrice { get; set; }
         public long FoodTypeId { get; set; }
+        public virtual FoodType FoodType { get; set; }
         public String FoodImagePath { get; set; } = String.Empty;
         public String FoodComposition { get; set; } = String.Empty;
 
-
+        public Food()
+        {
+            FoodType = new FoodType();
+        }
 
     }
 }
