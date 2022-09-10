@@ -1,10 +1,5 @@
 ﻿using OnlineFoodOrdering.Domain.Common;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OnlineFoodOrdering.Domain.Entities
 {
@@ -12,14 +7,25 @@ namespace OnlineFoodOrdering.Domain.Entities
     {
         [Required]
         public long OrderId { get; set; }
+        public virtual Order Order { get; set; }
+
 
         [Required]
         public long FoodId { get; set; }
+        public virtual Food Food { get; set; }
+
 
         [Required]
         public int Quantity { get; set; }
 
+
         [Required]
         public double TotalPrice { get; set; }
+
+        public OrderDetail()
+        {
+            Order = new Order();
+            Food = new Food();
+        }
     }
 }
