@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineFoodOrdering.Data.Interfaces.Emoloyees
+namespace OnlineFoodOrdering.Data.Interfaces.Employees
 {
     public interface IEmployeeRepository : IGenericRepository<Employee>
     {
