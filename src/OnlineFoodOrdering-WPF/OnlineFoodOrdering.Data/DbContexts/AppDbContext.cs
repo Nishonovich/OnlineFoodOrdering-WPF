@@ -18,10 +18,29 @@ namespace OnlineFoodOrdering.Data.DbContexts
         public virtual DbSet<FoodType> FoodTypes { get; set; } = null!;
         public virtual DbSet<Order> Orders { get; set; } = null!;
         public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
+        public virtual DbSet<Rating> Ratings { get; set; } = null!;
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql(DBConstants.connectionString);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Customer>()
+                .HasIndex(x => x.Email)
+                .IsUnique();
+            modelBuilder.Entity<Customer>()
+                .HasIndex(x => x.Login)
+                .IsUnique();
+
+            modelBuilder.Entity<Employee>()
+                .HasIndex(x => x.Email)
+                .IsUnique();
+            modelBuilder.Entity<Employee>()
+                .HasIndex(x => x.Login)
+                .IsUnique();
         }
     }
 }
