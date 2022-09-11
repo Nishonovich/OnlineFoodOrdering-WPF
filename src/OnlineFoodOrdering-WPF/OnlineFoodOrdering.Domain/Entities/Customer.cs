@@ -1,4 +1,5 @@
-﻿using OnlineFoodOrdering.Domain.Common;
+using OnlineFoodOrdering.Domain.Common;
+using OnlineFoodOrdering.Domain.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -25,5 +26,6 @@ namespace OnlineFoodOrdering.Domain.Entities
 
         [Required]
         public string Password { get; set; } = String.Empty;
+        public EmployeeRole EmployeeRole { get; set; }
     }
 }
