@@ -3,6 +3,7 @@ using OnlineFoodOrdering.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace OnlineFoodOrdering.Domain.Entities
         [Required, MaxLength(60)]
         public string FullName { get; set; } = String.Empty;
 
-        [Required]
+        [Required, Column(TypeName = "date")]
         public DateOnly BirthDate { get; set; }  // diagrammada ko'rsatilmagan
 
         [Required]
