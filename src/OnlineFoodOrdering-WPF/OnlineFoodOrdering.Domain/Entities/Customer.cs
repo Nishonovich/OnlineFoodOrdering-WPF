@@ -1,4 +1,3 @@
-
 using OnlineFoodOrdering.Domain.Common;
 using OnlineFoodOrdering.Domain.Enums;
 using System.ComponentModel.DataAnnotations;
