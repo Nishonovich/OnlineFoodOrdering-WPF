@@ -19,7 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\Emoloyees\" />
+    <Folder Include="Interfaces\Foods\" />
+    <Folder Include="Interfaces\Ratings\" />
+    <Folder Include="Interfaces\Payments\" />
+    <Folder Include="Interfaces\Orders\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 
