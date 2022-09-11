@@ -20,7 +20,7 @@ namespace OnlineFoodOrdering.Domain.Entities
         [Required]
         public Gender Gender { get; set; }  // diagrammada ko'rsatilmagan
 
-        [Required, MaxLength(15)]
+        [Phone, Required, MaxLength(13)]
         public string  PhoneNumber { get; set; } = String.Empty;
 
         [Required, MaxLength(30)]
