@@ -25,7 +25,7 @@ namespace OnlineFoodOrdering.Domain.Entities
         [Phone, Required, MaxLength(13)]
         public string  PhoneNumber { get; set; } = String.Empty;
 
-        [Email,Required, MaxLength(30)]
+        [Required, MaxLength(30)]
         public string Email { get; set; } = String.Empty;
 
         [Required]
