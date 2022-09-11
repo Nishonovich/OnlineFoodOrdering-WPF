@@ -1,4 +1,5 @@
-﻿using OnlineFoodOrdering.Domain.Common;
+﻿using DataAnnotationsExtensions;
+using OnlineFoodOrdering.Domain.Common;
 using OnlineFoodOrdering.Domain.Enums;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace OnlineFoodOrdering.Domain.Entities
         [Required, MaxLength(15)]
         public string  PhoneNumber { get; set; } = String.Empty;
 
-        [Required, MaxLength(30)]
+        [Email,Required, MaxLength(30)]
         public string Email { get; set; } = String.Empty;
 
         [Required]
