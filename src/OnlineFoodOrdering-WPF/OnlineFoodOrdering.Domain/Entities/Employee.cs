@@ -1,5 +1,4 @@
-﻿using DataAnnotationsExtensions;
-using OnlineFoodOrdering.Domain.Common;
+﻿using OnlineFoodOrdering.Domain.Common;
 using OnlineFoodOrdering.Domain.Enums;
 using System;
 using System.Collections.Generic;
