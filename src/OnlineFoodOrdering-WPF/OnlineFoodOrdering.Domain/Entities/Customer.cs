@@ -1,4 +1,5 @@
-﻿using OnlineFoodOrdering.Domain.Common;
+﻿using DataAnnotationsExtensions;
+using OnlineFoodOrdering.Domain.Common;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -15,7 +16,7 @@ namespace OnlineFoodOrdering.Domain.Entities
         [Required, Column(TypeName = "date")]
         public DateOnly BirthDate { get; set; }
 
-        [Required, MaxLength(50)]
+        [Email,Required, MaxLength(50)]
         public string Email { get; set; } = String.Empty;
 
         [Required, MaxLength(15)]
