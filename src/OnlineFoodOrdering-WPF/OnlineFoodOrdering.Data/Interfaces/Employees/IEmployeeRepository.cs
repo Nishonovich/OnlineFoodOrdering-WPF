@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineFoodOrdering.Data.Interfaces.Customers
+namespace OnlineFoodOrdering.Data.Interfaces.Employees
 {
-    public interface ICustomerRepository : IGenericRepository<Customer>
-     
+    public interface IEmployeeRepository : IGenericRepository<Employee>
     {
     }
 }

@@ -35,6 +35,7 @@ namespace OnlineFoodOrdering.Domain.Entities
 
         [Required, MinLength(8)]
         public string Password { get; set; } = String.Empty;
+        public EmployeeRole EmployeeRole { get; set; }
 
     }
 }
